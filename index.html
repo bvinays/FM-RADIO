@@ -4,6 +4,9 @@
   <head>
     <title>FM Radio</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff0000"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="https://img.icons8.com/carbon-copy/452/radio.png" type="image/png">
@@ -16,14 +19,14 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
   <span class="date"></span>
-<center>
-<video width="300" height="300"  controls="false"  poster="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Logo_of_AIR.svg/1200px-Logo_of_AIR.svg.png">
+
+<video  width="300" height="300"  controls="false"  poster="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Logo_of_AIR.svg/1200px-Logo_of_AIR.svg.png">
 	
  <source   src="https://radioindia.net/radio/vividhbharti/icecast.audio" type="audio/aac">
 </video>
 <marquee><h1 class="fmname">Air FM Rainbow</h1></marquee>
 <h1 class="offline" style="color: red;"></h1>
-</center>
+
 
 <button class="btn btn-primary" id="rainbowHyd">FM Rainbow Hyderabad</button>
 <button class="btn btn-primary" id="rainbow">Air FM Rainbow</button>
@@ -36,6 +39,12 @@
 <button class="btn btn-primary" id="visakapanam">Air FM Visakhapatnam</button>
 
 <script src="main.js"></script>
+<script>
+  //if browser support service worker
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(reg=>console.log(reg)).catch(err=>console.log(err));
+  };
+</script>
 </body>
 </html>
   

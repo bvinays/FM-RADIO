@@ -30,22 +30,21 @@ $("#visakapanam").click(()=>{currentId ="visakapanam";$("source").attr("src", "h
 
 
 $("video").click(function() {
-  //console.log(this); 
   if (this.paused) {
     this.play();
-    
   } else {
     this.pause();
   }
 });
 
-$(document).ready(function() { $("video").click();
+$(window).load(function() {
 if(new Date().getHours()>18 || new Date().getHours()<6){
   $("body").css("background-color","black")
   $(".fmname").css("color","white")
 
 }
 
+$('video').click()
 });
 
 // navigator.mediaSession.setActionHandler('play', function() { / Do something / });
