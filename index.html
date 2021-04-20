@@ -1,58 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <style>
-  .btn {
-   margin:20px;
-   border-radius: 10px;
- }
-  
-.play,
-.pause {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
-}
-.play {
-  background: transparent url('https://cdn4.iconfinder.com/data/icons/social-messaging-productivity-1/128/play-icon-2-128.png') no-repeat;
-  background-size: cover;
-}
-.pause {
-  background: transparent url('https://cdn1.iconfinder.com/data/icons/material-audio-video/20/pause-circle-outline-128.png') no-repeat;
-  background-size: cover;
-  display: none;
-}
-video::-webkit-media-controls-panel {
 
-
-}
-
-/* Could Use thise as well for Individual Controls */
-video::-webkit-media-controls-play-button {
-}
-
-video::-webkit-media-controls-volume-slider {
-  display: none;
-}
-
-video::-webkit-media-controls-mute-button {
-  display: none;
-}
-
-video::-webkit-media-controls-timeline {
-  display: none;
-}
-
-video::-webkit-media-controls-current-time-display {
-  display: none;
-}
-  </style>
   <head>
     <title>FM Radio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
   </head>
 <body >
 
@@ -139,3 +96,4 @@ navigator.mediaSession.setActionHandler('nexttrack', function() {document.getEle
 </script>
 </body>
 </html>
+ 
