@@ -19,25 +19,31 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
   <span class="date"></span>
-
-<video  width="300" height="300"  controls="false"  poster="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Logo_of_AIR.svg/1200px-Logo_of_AIR.svg.png">
+<div class="containercustom"  >
+<div class="jumbotron">
+<img width="300" height="300"  class="rotate" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Logo_of_AIR.svg/1200px-Logo_of_AIR.svg.png" alt="">
+  <audio  width="300" height="300"  autoplay controls> >
 	
- <source   src="https://radioindia.net/radio/vividhbharti/icecast.audio" type="audio/aac">
-</video>
+    <source   src="https://radioindia.net/radio/vividhbharti/icecast.audio" type="audio/aac">
+  </audio>
+</div>
+
 <marquee><h1 class="fmname">Air FM Rainbow</h1></marquee>
 <h1 class="offline" style="color: red;"></h1>
 
 
-<button class="btn btn-primary" id="rainbowHyd">FM Rainbow Hyderabad</button>
-<button class="btn btn-primary" id="rainbow">Air FM Rainbow</button>
-<button class="btn btn-primary" id="mirchi">Radio Mirchi</button>
-<button class="btn btn-primary" id="bigfm">Big FM</button>
-<button class="btn btn-primary" id="radioCity">Radio City</button>
-<button class="btn btn-primary" id="kurnool">Air FM Kurnool</button>
-<button class="btn btn-primary" id="kothagudham">Air FM Kothagudham</button>
-<button class="btn btn-primary" id="vijayawada">Air FM Vijayawada</button>
-<button class="btn btn-primary" id="visakapanam">Air FM Visakhapatnam</button>
-
+<row class="btn-group" >
+<button class="btn btn-secondary" id="rainbowHyd">FM Rainbow Hyderabad</button>
+<button class="btn btn-secondary" id="rainbow">Air FM Rainbow</button>
+<button class="btn btn-secondary" id="mirchi">Radio Mirchi</button>
+<button class="btn btn-secondary" id="bigfm">Big FM</button>
+<button class="btn btn-secondary" id="radioCity">Radio City</button>
+<button class="btn btn-secondary" id="kurnool">Air FM Kurnool</button>
+<button class="btn btn-secondary" id="kothagudham">Air FM Kothagudham</button>
+<button class="btn btn-secondary" id="vijayawada">Air FM Vijayawada</button>
+<button class="btn btn-secondary" id="visakapanam">Air FM Visakhapatnam</button>
+</row>
+</div>
 <script src="main.js"></script>
 </body>
 </html>
