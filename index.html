@@ -1,63 +1,73 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>FM Radio</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
- 
-    <meta name="theme-color" content="#ff0000"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="https://img.icons8.com/carbon-copy/452/radio.png" type="image/png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <meta name="description" content="Listen Hyderabad fm online,Kurnool fm online ,hyd fm online , fm online , telugu fm online"/>
-    <meta property="og:image" content="https://thumbs.dreamstime.com/b/vintage-radio-12545582.jpg" />
-    <meta property="og:image:secure_url" content="https://thumbs.dreamstime.com/b/vintage-radio-12545582.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="300" />
-    <meta property="og:image:alt" content="Listen Hyderabad fm online,Kurnool fm online ,hyd fm online , fm online , telugu fm online" />
+<head>
+  <title>FM Radio</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  </head>
-<body >
+  <meta name="theme-color" content="#ff0000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="main.css">
+  <link rel="icon" href="https://img.icons8.com/carbon-copy/452/radio.png" type="image/png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta name="description"
+    content="Listen Hyderabad fm online,Kurnool fm online ,hyd fm online , fm online , telugu fm online" />
+  <meta property="og:image" content="https://thumbs.dreamstime.com/b/vintage-radio-12545582.jpg" />
+  <meta property="og:image:secure_url" content="https://thumbs.dreamstime.com/b/vintage-radio-12545582.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:image:alt"
+    content="Listen Hyderabad fm online,Kurnool fm online ,hyd fm online , fm online , telugu fm online" />
+
+</head>
+
+<body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
   <span class="date"></span>
-<div class="containercustom"  >
-<div class="jumbotron">
-<img width="300" height="300"  class="rotate" src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Logo_of_AIR.svg/1200px-Logo_of_AIR.svg.png" alt="">
-  <audio  width="300" height="300"  autoplay controls> >
-	
-    <source   src="https://radioindia.net/radio/vividhbharti/icecast.audio" type="audio/aac">
-  </audio>
-</div>
+  <div class="containercustom">
+    <div class="jumbotron">
+      <img width="300" height="300" class="rotate"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Logo_of_AIR.svg/1200px-Logo_of_AIR.svg.png" alt="">
+      <audio id="player" width="300" height="300" autoplay controls> >
 
-<marquee><h1 class="fmname">Air FM Rainbow</h1></marquee>
-<h1 class="offline" style="color: red;"></h1>
+        <source src="https://radioindia.net/radio/vividhbharti/icecast.audio" type="audio/aac">
+      </audio>
 
+      <input id="vol-control" type="range" min="0" max="100" value="50" oninput="SetVolume(this.value)" 
+      onchange="SetVolume(this.value)" class="vertical" orient="vertical" >
+    </div>
 
-<row class="btn-group" >
-<button class="btn btn-secondary" id="rainbowHyd">FM Rainbow Hyderabad</button>
-<button class="btn btn-secondary" id="rainbow">Air FM Rainbow</button>
-<button class="btn btn-secondary" id="mirchi">Radio Mirchi</button>
-<button class="btn btn-secondary" id="bigfm">Big FM</button>
-<button class="btn btn-secondary" id="radioCity">Radio City</button>
-<button class="btn btn-secondary" id="radioCitytamil">Radio City Tamil</button>
-<button class="btn btn-secondary" id="kurnool">Air FM Kurnool</button>
-<button class="btn btn-secondary" id="kothagudham">Air FM Kothagudham</button>
-<button class="btn btn-secondary" id="vijayawada">Air FM Vijayawada</button>
-<button class="btn btn-secondary" id="visakapanam">Air FM Visakhapatnam</button>
-<button class="btn btn-secondary" id="radioCitypunjab">Radio City Punjabi</button>
-<button class="btn btn-secondary" id="radioCitybhakti">Radio City Bhakti</button>
+    <marquee>
+      <h1 class="fmname">Air FM Rainbow</h1>
+    </marquee>
+    <h1 class="offline" style="color: red;"></h1>
 
 
+    <row class="btn-group">
+      <button class="btn btn-secondary" id="rainbowHyd">FM Rainbow Hyderabad</button>
+      <button class="btn btn-secondary" id="rainbow">Air FM Rainbow</button>
+      <button class="btn btn-secondary" id="mirchi">Radio Mirchi</button>
+      <button class="btn btn-secondary" id="bigfm">Big FM</button>
+      <button class="btn btn-secondary" id="radioCity">Radio City</button>
+      <button class="btn btn-secondary" id="radioCitytamil">Radio City Tamil</button>
+      <button class="btn btn-secondary" id="kurnool">Air FM Kurnool</button>
+      <button class="btn btn-secondary" id="kothagudham">Air FM Kothagudham</button>
+      <button class="btn btn-secondary" id="vijayawada">Air FM Vijayawada</button>
+      <button class="btn btn-secondary" id="visakapanam">Air FM Visakhapatnam</button>
+      <button class="btn btn-secondary" id="radioCitypunjab">Radio City Punjabi</button>
+      <button class="btn btn-secondary" id="radioCitybhakti">Radio City Bhakti</button>
 
 
-</row>
-</div>
-<script src="main.js"></script>
+
+
+    </row>
+  </div>
+  <script src="main.js"></script>
 </body>
+
 </html>

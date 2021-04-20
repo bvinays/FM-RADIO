@@ -48,6 +48,14 @@ if(new Date().getHours()>18 || new Date().getHours()<6){
 
 }
 
+
+window.SetVolume = function(val)
+{
+  console.log(val)
+    var player = document.getElementById('player');
+    
+    player.volume = val / 100;
+}
 $('audio').click()
 });
 
