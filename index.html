@@ -39,9 +39,12 @@
 
         <source src="https://radioindia.net/radio/vividhbharti/icecast.audio" type="audio/aac">
       </audio>
-
+      <div class="volume">
+      <i class="fas fa-volume-off"></i>
       <input id="vol-control" type="range" min="0" max="100" value="50" oninput="SetVolume(this.value)" 
-      onchange="SetVolume(this.value)" class="vertical" orient="vertical" >
+      onchange="SetVolume(this.value)"  >
+      <i class="fas fa-volume-up"></i>
+    </div>
     </div>
 <ul class="controls">
   <li><i id="prev" class="fas fa-arrow-left"></i></li>
