@@ -33,13 +33,20 @@ $("#visakapanam").click(()=>{currentId ="visakapanam";$("source").attr("src", "h
 
 
 
-$("audio").click(function() {
-  if (this.paused) {
-    this.play();
-  } else {
-    this.pause();
-  }
+$("#play").click(function() {
+    $("audio").get(0).play();
 });
+
+$("#pause").click(function() {
+  $("audio").get(0).pause();
+})
+$("#prev").click(function() {
+  document.getElementById(currentId).previousElementSibling.click()
+
+})
+$("#next").click(function() {
+  document.getElementById(currentId).nextElementSibling.click() 
+})
 
 $(window).load(function() {
 if(new Date().getHours()>18 || new Date().getHours()<6){
