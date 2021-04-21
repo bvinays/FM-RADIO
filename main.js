@@ -28,6 +28,12 @@ $("#radioCitybhakti").click(()=>{currentId ="radioCitytamil";$("source").attr("s
 
 $("#vijayawada").click(()=>{currentId ="vijayawada";$("source").attr("src", "https://radioindia.net/radio/air_rainbow_vijvayada/icecast.audio");$("img").attr("src", " https://onlineradiofm.in/assets/image/radio/180/fmrainvijayawada.jpg");$("audio").load();$("audio").click();$(".fmname").html("Air FM Vijayawada");$(".offline").html("")});
 $("#visakapanam").click(()=>{currentId ="visakapanam";$("source").attr("src", "https://onlineradiofm.in/apii.php?url=https://radioindia.net/radio/air_rainbow_visakapanam/icecast.audio");$("img").attr("src", "https://i.ytimg.com/vi/kQPhefaNyLw/hqdefault.jpg");$("audio").load();$("audio").click();$(".fmname").html("Air FM Visakhapatnam");$(".offline").html("")});
+$("#indiFun").click(()=>{currentId ="indiFun";$("source").attr("src", "https://onlineradiobox.com/json/in/indifun/play?platform=web");$("img").attr("src", "https://picsum.photos/200");$("audio").load();$("audio").click();$(".fmname").html("IndiFun Radio");$(".offline").html("")});
+$("#indiFun").click(()=>{currentId ="indiFun";$("source").attr("src", "https://onlineradiobox.com/json/in/indifun/play?platform=web");$("img").attr("src", "https://picsum.photos/200");$("audio").load();$("audio").click();$(".fmname").html("IndiFun Radio");$(".offline").html("")});
+$("#Bhajan_Radio").click(()=>{currentId ="Bhajan_Radio";$("source").attr("src", "http://192.99.35.215:5086/stream");$("img").attr("src", "https://picsum.photos/200");$("audio").load();$("audio").click();$(".fmname").html("Bhajan Radio");$(".offline").html("")});
+
+
+
 
 
 
@@ -54,7 +60,9 @@ if(new Date().getHours()>18 || new Date().getHours()<6){
   $(".fmname").css("color","white")
 
 }
-
+$(`#${currentId}`).css("outline","auto")
+$("body").click(()=>{$(`#${currentId}`).css("outline","auto")})
+});
 
 window.SetVolume = function(val)
 {
@@ -63,9 +71,6 @@ window.SetVolume = function(val)
     
     player.volume = val / 100;
 }
-$('audio').click()
-});
-
 // navigator.mediaSession.setActionHandler('play', function() { / Do something / });
 // navigator.mediaSession.setActionHandler('pause', function() { alert('pause'); });
 // navigator.mediaSession.setActionHandler('seekbackward', function() { / Do something / });

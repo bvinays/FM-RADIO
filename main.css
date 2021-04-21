@@ -1,7 +1,8 @@
 
 .btn {
- margin:20px;
+ margin:10px;
  border-radius: 10px;
+ outline-color: cadetblue;
 }
 
 .play,
@@ -79,7 +80,7 @@ display: none;
   
 }
 .containercustom{
-    background-color: blanchedalmond;
+    background-color: rgb(58, 52, 43);
 height:900px;
 overflow: scroll;
 }
@@ -124,11 +125,17 @@ overflow: scroll;
     
    
 }
-
+.btn_group{
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  height:400px
+}
 .controls li {
   list-style-type: none; ;
   font-size:25px;
   float: left;
+  color: aqua;
 }
 .controls{
   width: 100%;
