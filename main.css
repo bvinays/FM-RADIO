@@ -52,10 +52,16 @@ display: none;
 audio::-webkit-media-controls-current-time-display {
 display: none;
 }
+
 .jumbotron{
     margin-top: 30px;
     text-align: center;
-    background-image: url('https://picsum.photos/500/500?blur');
+    background-image: url('https://picsum.photos/500/500?blur') ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0px;
 }
 .containercustom{
     background-color: blanchedalmond;
@@ -104,6 +110,15 @@ overflow: scroll;
    
 }
 
-	input[type="range"] {
-	
-  }
+.controls li {
+  list-style-type: none; ;
+  font-size:25px;
+  float: left;
+}
+.controls{
+  width: 100%;
+  justify-content: space-evenly;
+  display:flex;
+padding-left: 0;
+
+}
